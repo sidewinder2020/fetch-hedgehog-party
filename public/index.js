@@ -71,6 +71,12 @@ const unInviteHedgehog = () => {
 
 };
 
+const clearForm = () => {
+  $('#name').val("New Hedgehog Please");
+  $('#hoglets').val("");
+  $('#allergies').val("will your hedgehog die from anything?");
+};
+
 
 
 $(document).ready(() => {
@@ -82,6 +88,7 @@ $(document).ready(() => {
     var hedgyHoglets = $('#hoglets').val();
     var hedgyAllergies = $('#allergies').val();
     addNewHedgehog(hedgyName,hedgyHoglets,hedgyAllergies);
+    clearForm();
   });
 
 });
